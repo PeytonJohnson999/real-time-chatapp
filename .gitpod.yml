@@ -1,0 +1,10 @@
+image: gitpod/workspace-postgres
+
+tasks:
+  - name: "frontend"
+    command: 'cd frontend && npm run build'
+  - name: "backend"
+    command: 'cd backend && cargo run --release'
+
+  - name: "database"
+    command: 'psql logindb'
